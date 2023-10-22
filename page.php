@@ -14,20 +14,7 @@
 
 <div class="section properties">
     <div class="container">
-        <ul class="properties-filter">
-            <li>
-                <a class="is_active" href="#!" data-filter="*">Show All</a>
-            </li>
-            <li>
-                <a href="#!" data-filter=".adv">Apartment</a>
-            </li>
-            <li>
-                <a href="#!" data-filter=".str">Villa House</a>
-            </li>
-            <li>
-                <a href="#!" data-filter=".rac">Penthouse</a>
-            </li>
-        </ul>
+        
         <div class="row properties-box">
 
             <?php if (have_posts()) :
