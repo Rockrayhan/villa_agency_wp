@@ -1,4 +1,6 @@
 <?php  get_header() ?>
+
+<!--  cloned from index.php  -->
   <!-- ***** Header Area End ***** -->
 
   <div class="page-heading header-text">

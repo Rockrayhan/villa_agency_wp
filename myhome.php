@@ -1,98 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php 
+/* 
+Template Name: Home_page
+*/
 
-  <head>
+?>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <title>Villa Agency - Real Estate HTML5 Template</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<?php  get_header() ?>
 
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-villa-agency.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-<!--
-
-TemplateMo 591 villa agency
-
-https://templatemo.com/tm-591-villa-agency
-
--->
-  </head>
-
-<body>
-
-  <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div>
-  <!-- ***** Preloader End ***** -->
-
-  <div class="sub-header">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-8">
-          <ul class="info">
-            <li><i class="fa fa-envelope"></i> info@company.com</li>
-            <li><i class="fa fa-map"></i> Sunny Isles Beach, FL 33160</li>
-          </ul>
-        </div>
-        <div class="col-lg-4 col-md-4">
-          <ul class="social-links">
-            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="https://x.com/minthu" target="_blank"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        <h1>Villa</h1>
-                    </a>
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                      <li><a href="index.html" class="active">Home</a></li>
-                      <li><a href="properties.html">Properties</a></li>
-                      <li><a href="property-details.html">Property Details</a></li>
-                      <li><a href="contact.html">Contact Us</a></li>
-                      <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li>
-                  </ul>   
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
-            </div>
-        </div>
-    </div>
-  </header>
-  
   <!-- ***** Header Area End ***** -->
 
   <div class="main-banner">
@@ -123,8 +38,8 @@ https://templatemo.com/tm-591-villa-agency
       <div class="row">
         <div class="col-lg-4">
           <div class="left-image">
-            <img src="assets/images/featured.jpg" alt="">
-            <a href="property-details.html"><img src="assets/images/featured-icon.png" alt="" style="max-width: 60px; padding: 0px;"></a>
+            <img src=" <?php echo get_template_directory_uri() ?> /assets/images/featured.jpg" alt="">
+            <a href="property-details.html"><img src="<?php echo get_template_directory_uri() ?> /assets/images/featured-icon.png" alt="" style="max-width: 60px; padding: 0px;"></a>
           </div>
         </div>
         <div class="col-lg-5">
@@ -174,19 +89,19 @@ https://templatemo.com/tm-591-villa-agency
           <div class="info-table">
             <ul>
               <li>
-                <img src="assets/images/info-icon-01.png" alt="" style="max-width: 52px;">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/images/info-icon-01.png" alt="" style="max-width: 52px;">
                 <h4>250 m2<br><span>Total Flat Space</span></h4>
               </li>
               <li>
-                <img src="assets/images/info-icon-02.png" alt="" style="max-width: 52px;">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/images/info-icon-02.png" alt="" style="max-width: 52px;">
                 <h4>Contract<br><span>Contract Ready</span></h4>
               </li>
               <li>
-                <img src="assets/images/info-icon-03.png" alt="" style="max-width: 52px;">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/images/info-icon-03.png" alt="" style="max-width: 52px;">
                 <h4>Payment<br><span>Payment Process</span></h4>
               </li>
               <li>
-                <img src="assets/images/info-icon-04.png" alt="" style="max-width: 52px;">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/images/info-icon-04.png" alt="" style="max-width: 52px;">
                 <h4>Safety<br><span>24/7 Under Control</span></h4>
               </li>
             </ul>
@@ -293,7 +208,7 @@ https://templatemo.com/tm-591-villa-agency
                       </div>
                     </div>
                     <div class="col-lg-6">
-                      <img src="assets/images/deal-01.jpg" alt="">
+                      <img src="<?php echo get_template_directory_uri() ?>/assets/images/deal-01.jpg" alt="">
                     </div>
                     <div class="col-lg-3">
                       <h4>Extra Info About Property</h4>
@@ -319,7 +234,7 @@ https://templatemo.com/tm-591-villa-agency
                       </div>
                     </div>
                     <div class="col-lg-6">
-                      <img src="assets/images/deal-02.jpg" alt="">
+                      <img src="<?php echo get_template_directory_uri() ?>/assets/images/deal-02.jpg" alt="">
                     </div>
                     <div class="col-lg-3">
                       <h4>Detail Info About Villa</h4>
@@ -344,7 +259,7 @@ https://templatemo.com/tm-591-villa-agency
                       </div>
                     </div>
                     <div class="col-lg-6">
-                      <img src="assets/images/deal-03.jpg" alt="">
+                      <img src="<?php echo get_template_directory_uri() ?>/assets/images/deal-03.jpg" alt="">
                     </div>
                     <div class="col-lg-3">
                       <h4>Extra Info About Penthouse</h4>
@@ -509,13 +424,13 @@ https://templatemo.com/tm-591-villa-agency
           <div class="row">
             <div class="col-lg-6">
               <div class="item phone">
-                <img src="assets/images/phone-icon.png" alt="" style="max-width: 52px;">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/images/phone-icon.png" alt="" style="max-width: 52px;">
                 <h6>010-020-0340<br><span>Phone Number</span></h6>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="item email">
-                <img src="assets/images/email-icon.png" alt="" style="max-width: 52px;">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/images/email-icon.png" alt="" style="max-width: 52px;">
                 <h6>info@villa.co<br><span>Business Email</span></h6>
               </div>
             </div>
@@ -560,24 +475,4 @@ https://templatemo.com/tm-591-villa-agency
     </div>
   </div>
 
-  <footer>
-    <div class="container">
-      <div class="col-lg-8">
-        <p>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved. 
-        
-        Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a> Distribution: <a href="https://themewagon.com">ThemeWagon</a></p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/custom.js"></script>
-
-  </body>
-</html>
+  <?php  get_footer() ?>

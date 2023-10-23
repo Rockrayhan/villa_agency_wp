@@ -5,6 +5,8 @@ Template Name: Contact page
 
 ?>
 
+<!--  colned from  index.php -->
+
 <?php  get_header() ?>
   <!-- ***** Header Area End ***** -->
 

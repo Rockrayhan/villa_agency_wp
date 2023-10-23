@@ -1,6 +1,8 @@
 <?php get_header() ?>
 <!-- ***** Header Area End ***** -->
 
+<!--  cloned from single.php  -->
+
 <div class="page-heading header-text">
     <div class="container">
         <div class="row">
