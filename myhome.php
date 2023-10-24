@@ -82,7 +82,7 @@ Template Name: Home_page
             </div>
           </div>
         </div>
-        <div class="col-lg-3">
+        <!-- <div class="col-lg-3">
           <div class="info-table">
             <ul>
               <li>
@@ -103,7 +103,33 @@ Template Name: Home_page
               </li>
             </ul>
           </div>
-        </div>
+        </div> -->
+
+        <div class="col-lg-3">
+   <div class="info-table">
+      <ul>
+         <?php
+            $info_args = array(
+               'post_type' => 'sidebar_info',
+               'posts_per_page' => -1, // Retrieve all sidebar info posts
+            );
+            $info_query = new WP_Query($info_args);
+
+            while ($info_query->have_posts()) : $info_query->the_post();
+         ?>
+         <li>
+            <?php if (has_post_thumbnail()) : ?>
+               <img src="<?php the_post_thumbnail_url('thumbnail'); ?>" alt="<?php the_title(); ?>" style="max-width: 52px;">
+            <?php endif; ?>
+            <h4><?php the_title(); ?></h4>
+            <?php the_content(); ?>
+         </li>
+         <?php endwhile; wp_reset_postdata(); ?>
+      </ul>
+   </div>
+</div>
+
+
       </div>
     </div>
   </div>
