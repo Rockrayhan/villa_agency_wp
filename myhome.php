@@ -9,6 +9,7 @@ Template Name: Home_page
 
 
   <!-- ***** Header Area End ***** -->
+  <!-- banner -->
   <div class="main-banner">
    <div class="owl-carousel owl-banner">
       <?php
@@ -30,10 +31,13 @@ Template Name: Home_page
    </div>
 </div>
 
+
+<!-- Featured section -->
   <div class="featured section">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4">
+
+        <!-- <div class="col-lg-4">
           <div class="left-image">
             <img src=" <?php echo get_template_directory_uri() ?> /assets/images/featured.jpg" alt="">
             <a href="property-details.html"><img src="<?php echo get_template_directory_uri() ?> /assets/images/featured-icon.png" alt="" style="max-width: 60px; padding: 0px;"></a>
@@ -81,7 +85,58 @@ Template Name: Home_page
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
+
+
+        <!--  Featured Section  -->
+        <div class="col-lg-4">
+   <div class="left-image">
+      <?php
+         $featured_section_args = array(
+            'post_type' => 'featured_section', // Use the appropriate post type if you created a custom one
+            'posts_per_page' => 1, // Retrieve one featured section post
+         );
+         $featured_section_query = new WP_Query($featured_section_args);
+
+         if ($featured_section_query->have_posts()) : $featured_section_query->the_post();
+      ?>
+      <img src="<?php the_post_thumbnail_url(); ?>" alt="">
+      <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/featured-icon.png" alt="" style="max-width: 60px; padding: 0px;"></a>
+      <?php endif; wp_reset_postdata(); ?>
+   </div>
+</div>
+
+<div class="col-lg-5">
+   <div class="section-heading">
+      <?php
+         if ($featured_section_query->have_posts()) : $featured_section_query->the_post();
+      ?>
+      <h6>| <?php the_category(', '); ?></h6>
+      <h2><?php the_title(); ?></h2>
+      <?php endif; wp_reset_postdata(); ?>
+   </div>
+   <div class="accordion" id="accordionExample">
+      <?php
+         if ($featured_section_query->have_posts()) : $featured_section_query->the_post();
+      ?>
+      <div class="accordion-item">
+         <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+               <?php the_title(); ?>
+            </button>
+         </h2>
+         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+               <?php the_content(); ?>
+            </div>
+         </div>
+      </div>
+      <?php endif; wp_reset_postdata(); ?>
+   </div>
+</div>
+
+
+
         <!-- <div class="col-lg-3">
           <div class="info-table">
             <ul>

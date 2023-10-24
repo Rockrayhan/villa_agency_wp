@@ -20,12 +20,21 @@ function ficonsu_setup(){
         'footer_menu'  => __( 'Footer Menu', 'ficonsu' ),
     ) );
 
+    // for info sidebar
     $args = array(
         'public' => true,
         'label'  => 'Sidebar Info',
         'supports' => array('title', 'thumbnail', 'editor'),
     );
     register_post_type('sidebar_info', $args);
+
+    // for Feature sidebar
+    $args = array(
+        'public' => true,
+        'label'  => 'featured section',
+        'supports' => array('title', 'thumbnail', 'editor'),
+    );
+    register_post_type('featured_section', $args);
 
 }
 
