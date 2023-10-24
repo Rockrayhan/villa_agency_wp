@@ -9,29 +9,26 @@ Template Name: Home_page
 
 
   <!-- ***** Header Area End ***** -->
-
   <div class="main-banner">
-    <div class="owl-carousel owl-banner">
-      <div class="item item-1">
-        <div class="header-text">
-          <span class="category">Toronto, <em>Canada</em></span>
-          <h2>Hurry!<br>Get the Best Villa for you</h2>
-        </div>
+   <div class="owl-carousel owl-banner">
+      <?php
+         $banner_args = array(
+            'post_type' => 'banners',
+            'posts_per_page' => -1, // Retrieve all banner posts
+         );
+         $banner_query = new WP_Query($banner_args);
+
+         while ($banner_query->have_posts()) : $banner_query->the_post();
+      ?>
+      <div class="item">
+         <div class="header-text">
+            <span class="category"><?php the_post_thumbnail() ?></span>
+            <h2><?php echo the_category(); ?></h2>
+         </div>
       </div>
-      <div class="item item-2">
-        <div class="header-text">
-          <span class="category">Melbourne, <em>Australia</em></span>
-          <h2>Be Quick!<br>Get the best villa in town</h2>
-        </div>
-      </div>
-      <div class="item item-3">
-        <div class="header-text">
-          <span class="category">Miami, <em>South Florida</em></span>
-          <h2>Act Now!<br>Get the highest level penthouse</h2>
-        </div>
-      </div>
-    </div>
-  </div>
+      <?php endwhile; wp_reset_postdata(); ?>
+   </div>
+</div>
 
   <div class="featured section">
     <div class="container">
