@@ -41,4 +41,18 @@ function ficonsu_setup(){
 add_action('after_setup_theme' , 'ficonsu_setup');
 
 
+// widgets
+function ficonsu_sidebars() {
+	register_sidebar( array(
+		'name'          => __( 'Main Sidebar-1', 'ficonsu' ),
+		'id'            => 'sidebar-1',
+		'description'   => __( '', 'textdomain' ),
+		 'before_widget' => '<div class="info-table">',
+		 'after_widget'  => '</div>',
+		// 'before_title'  => '<h2 class="widgettitle">',
+		// 'after_title'   => '</div>',
+	) );
+    }
+    add_action( 'widgets_init', 'ficonsu_sidebars' );
+
 ?>

@@ -91,8 +91,9 @@ Template Name: Home_page
 
 
       <!-- ====== feature sidebar ===== -->
-      <!-- <div class="col-lg-3">
-          <div class="info-table">
+      <div class="col-lg-3">
+        <?php  dynamic_sidebar('sidebar-1') ?>
+          <!-- <div class="info-table">
             <ul>
               <li>
                 <img src=" <?php echo get_template_directory_uri() ?>/assets/images/info-icon-01.png" alt="" style="max-width: 52px;">
@@ -111,33 +112,8 @@ Template Name: Home_page
                 <h4>Safety<br><span>24/7 Under Control</span></h4>
               </li>
             </ul>
-          </div>
-        </div> -->
-
-      <div class="col-lg-3">
-        <div class="info-table">
-          <ul>
-            <?php
-            $info_args = array(
-              'post_type' => 'sidebar_info',
-              'posts_per_page' => -1, // Retrieve all sidebar info posts
-            );
-            $info_query = new WP_Query($info_args);
-
-            while ($info_query->have_posts()) : $info_query->the_post();
-            ?>
-              <li>
-                <?php if (has_post_thumbnail()) : ?>
-                  <img src="<?php the_post_thumbnail_url('thumbnail'); ?>" alt="<?php the_title(); ?>" style="max-width: 52px;">
-                <?php endif; ?>
-                <h4><?php the_title(); ?></h4>
-                <?php the_content(); ?>
-              </li>
-            <?php endwhile;
-            wp_reset_postdata(); ?>
-          </ul>
+          </div> -->
         </div>
-      </div>
 
 
     </div>
