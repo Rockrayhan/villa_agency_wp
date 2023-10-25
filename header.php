@@ -28,6 +28,59 @@ https://templatemo.com/tm-591-villa-agency
 <?php wp_head() ?>
   </head>
 
+  <style>
+  /* Style the main navigation menu */
+  .main-nav {
+    text-align: center;
+  }
+
+  .main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+  }
+
+  /* Style the sub-menu (dropdown) */
+  .main-nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0,0,0,0.2) ;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .main-nav ul li:hover > ul {
+    display: block;
+  }
+
+  .main-nav ul ul li {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  /* Style links within the sub-menu */
+  .main-nav ul ul li a {
+    display: block;
+    /* padding: 10px 20px; */
+    color: #333;
+    text-decoration: none;
+  }
+
+  .main-nav ul ul li a:hover {
+    /* background-color: #f0f0f0; */
+  }
+</style>
+
+
 <body>
 
   <!-- ***** Preloader Start ***** -->
@@ -71,44 +124,25 @@ https://templatemo.com/tm-591-villa-agency
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
-                    <a href=" <?php echo get_home_url() ?> " class="logo">
+                    <a href="<?php echo get_home_url(); ?>" class="logo">
                         <h1> Villa </h1>
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
-                    <!-- <ul class="nav">
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="properties.html" class="active">Properties</a></li>
-                      <li><a href="property-details.html">Property Details</a></li>
-                      <li><a href="contact.html">Contact Us</a></li>
-                      <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li>
-                  </ul>    -->
-                    <!-- ***** Menu End ***** -->
-
                     <?php
-wp_nav_menu( array(
-    'menu'                => "ul", // (int|string|WP_Term) Desired menu. Accepts a menu ID, slug, name, or object.
-    'menu_class'        => "nav", // (string) CSS class to use for the ul element which forms the menu. Default 'menu'.
-    'menu_id'            => "", // (string) The ID that is applied to the ul element which forms the menu. Default is the menu slug, incremented.
-    'container'            => "", // (string) Whether to wrap the ul, and what to wrap it with. Default 'div'.
-    'container_class'    => "", // (string) Class that is applied to the container. Default 'menu-{menu slug}-container'.
-    'container_id'        => "", // (string) The ID that is applied to the container.
-    // 'fallback_cb'        => "", // (callable|bool) If the menu doesn't exists, a callback function will fire. Default is 'wp_page_menu'. Set to false for no fallback.
-    // 'before'            => "", // (string) Text before the link markup.
-    // 'after'                => "", // (string) Text after the link markup.
-    // 'link_before'        => "", // (string) Text before the link text.
-    // 'link_after'        => "", // (string) Text after the link text.
-    // 'echo'                => "", // (bool) Whether to echo the menu or return it. Default true.
-    // 'depth'                => "", // (int) How many levels of the hierarchy are to be included. 0 means all. Default 0.
-    // 'walker'            => "", // (object) Instance of a custom walker class.
-    'theme_location'    => "main_menu", // (string) Theme location to be used. Must be registered with register_nav_menu() in order to be 
-));
-
-?>
-
-
+                    wp_nav_menu(array(
+                        'menu'            => "ul",
+                        'menu_class'      => "nav",
+                        'menu_id'         => "",
+                        'container'       => "",
+                        'container_class' => "",
+                        'container_id'    => "",
+                        'theme_location'  => "main_menu",
+                    ));
+                    ?>
+                    <!-- ***** Menu End ***** -->
                 </nav>
             </div>
         </div>
     </div>
-  </header>
+</header>
