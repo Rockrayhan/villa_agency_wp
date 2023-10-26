@@ -40,8 +40,6 @@
         <div class="ms-5 col-lg-6 col-md-6 align-self-center mb-30 properties-items col-md-6 adv">
           <div class="item">
             <a href=" <?php the_permalink() ?> "> <?php the_post_thumbnail() ?> </a>
-            <span class="category">Luxury Villa</span>
-            <h6>$2.264.000</h6>
             <h4><a href=" <?php echo the_permalink() ?> "> <?php  echo the_title() ?> </a></h4>
             <ul>
              <?php the_content() ?>
